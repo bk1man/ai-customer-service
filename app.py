@@ -6,17 +6,17 @@ AI Customer Service for WeChat Public Account
 from flask import Flask, request, make_response
 import hashlib
 from wechat_handler import WeChatHandler
-from knowledge_base import KnowledgeBase
+from knowledge_base import EnhancedKnowledgeBase
 
 app = Flask(__name__)
 
 # 微信公众号配置
-WECHAT_TOKEN = "your_token_here"  # 需要在微信公众号后台配置
+WECHAT_TOKEN = "taxi_agent_202603272157"  # 需要在微信公众号后台配置
 WECHAT_APPID = "wx4bf0c5fd794ea6c6"
 WECHAT_APPSECRET = "01fc695af6ecc5c47b021c7a59ba9168"
 
 # 初始化组件
-knowledge_base = KnowledgeBase()
+knowledge_base = EnhancedKnowledgeBase()
 wechat_handler = WeChatHandler(knowledge_base)
 
 
