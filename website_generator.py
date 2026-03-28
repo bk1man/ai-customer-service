@@ -90,7 +90,7 @@ class WebsiteGenerator:
             return None
         html = self._render_html(config)
         filename = f"{uuid.uuid4().hex[:8]}.html"
-        filepath = f"/var/www/newsletter/temp/{filename}"
+        filepath = f"/var/www/ai-website/temp/{filename}"
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(html)
         url = f"https://ysywlkj.xyz/temp/{filename}"
